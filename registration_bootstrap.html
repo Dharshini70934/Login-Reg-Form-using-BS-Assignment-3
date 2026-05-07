@@ -1,0 +1,277 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+
+    <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <style>
+        body{
+            background:linear-gradient(to right, #36d1dc, #5b86e5);
+        }
+
+        .box{
+            width:750px;
+            margin:30px auto;
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 0 20px rgba(0,0,0,0.3);
+        }
+
+        h1{
+            text-align:center;
+            color:#1565c0;
+            margin-bottom:25px;
+        }
+
+        .btn-primary{
+            background:#1565c0;
+            border:none;
+        }
+
+        small{
+            color:red;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>STUDENT REGISTRATION FORM</h1>
+
+    <form class="form-horizontal">
+
+        <div class="form-group">
+            <label class="col-sm-3">Roll No:</label>
+
+            <div class="col-sm-9">
+                <input 
+                    type="text"
+                    class="form-control"
+                    required
+                    pattern="[0-9]{1,10}"
+                    title="Enter valid roll number"
+                >
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-3">Email ID:</label>
+
+            <div class="col-sm-9">
+                <input 
+                    type="email"
+                    class="form-control"
+                    required
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    title="Enter a valid email address"
+                >
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-3">Student Name:</label>
+
+            <div class="col-sm-9" style="display:flex; gap:10px;">
+
+                <input 
+                    type="text"
+                    class="form-control"
+                    placeholder="First Name"
+                    required
+                    pattern="[A-Za-z ]+"
+                    title="Only alphabets allowed"
+                >
+
+                <input 
+                    type="text"
+                    class="form-control"
+                    placeholder="Last Name"
+                    required
+                    pattern="[A-Za-z ]+"
+                    title="Only alphabets allowed"
+                >
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-3">Password:</label>
+
+            <div class="col-sm-9">
+
+                <input 
+                    type="password"
+                    class="form-control"
+                    required
+                    minlength="6"
+                    maxlength="12"
+                    title="Password must contain 6-12 characters"
+                >
+
+                <small>Password must contain 6-12 characters</small>
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-3">Father's Name:</label>
+
+            <div class="col-sm-9">
+                <input 
+                    type="text"
+                    class="form-control"
+                    required
+                    pattern="[A-Za-z ]+"
+                    title="Only alphabets allowed"
+                >
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-3">Mobile No:</label>
+
+            <div class="col-sm-9" style="display:flex; gap:10px;">
+
+                <input 
+                    type="text"
+                    value="+91"
+                    class="form-control"
+                    style="width:80px;"
+                    readonly
+                >
+
+                <input 
+                    type="tel"
+                    class="form-control"
+                    placeholder="10 digit number"
+                    required
+                    pattern="[0-9]{10}"
+                    title="Enter valid 10 digit mobile number"
+                >
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-3">Date of Birth:</label>
+
+            <div class="col-sm-9">
+                <input type="date" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-3">Course:</label>
+
+            <div class="col-sm-9">
+
+                <select class="form-control" required>
+                    <option value="">Select Course</option>
+                    <option>B.TECH</option>
+                    <option>B.COM</option>
+                    <option>M.SC</option>
+                </select>
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-3">Gender:</label>
+
+            <div class="col-sm-9">
+
+                <label class="radio-inline">
+                    <input type="radio" name="gender" required> Male
+                </label>
+
+                <label class="radio-inline">
+                    <input type="radio" name="gender"> Female
+                </label>
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-3">Department:</label>
+
+            <div class="col-sm-9">
+
+                <label class="radio-inline">
+                    <input type="radio" name="dept" required> AI&DS
+                </label>
+
+                <label class="radio-inline">
+                    <input type="radio" name="dept"> IT
+                </label>
+
+                <label class="radio-inline">
+                    <input type="radio" name="dept"> CSE
+                </label>
+
+                <label class="radio-inline">
+                    <input type="radio" name="dept"> Civil
+                </label>
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-3">Student Photo:</label>
+
+            <div class="col-sm-9">
+                <input 
+                    type="file"
+                    class="form-control"
+                    accept=".jpg,.jpeg,.png"
+                    required
+                >
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-3">City:</label>
+
+            <div class="col-sm-9">
+                <input 
+                    type="text"
+                    class="form-control"
+                    required
+                    pattern="[A-Za-z ]+"
+                    title="Only alphabets allowed"
+                >
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-3">Address:</label>
+
+            <div class="col-sm-9">
+                <textarea class="form-control" required></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+
+            <div class="col-sm-offset-3 col-sm-9">
+
+                <button type="submit" class="btn btn-primary">
+                    REGISTER
+                </button>
+
+            </div>
+
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>
