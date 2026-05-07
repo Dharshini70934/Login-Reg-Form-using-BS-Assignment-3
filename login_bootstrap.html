@@ -1,1 +1,94 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
 
+    <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <style>
+    body{
+        background:linear-gradient(to right, #e0c3fc, #c2e9fb);
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+        flex-direction:column;
+    }
+
+    .box{
+        background:white;
+        width:350px;
+        padding:30px;
+        border-radius:10px;
+        box-shadow:0 0 20px rgba(0,0,0,0.2);
+    }
+
+    h2{
+        text-align:center;
+        color:#6a5acd;
+        margin-bottom:20px;
+    }
+
+    .btn-primary{
+        background:#6a5acd;
+        border:none;
+    }
+
+    small{
+        color:red;
+    }
+
+    .link{
+        text-align:center;
+        margin-top:15px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h2>Login</h2>
+
+    <form>
+
+        <input 
+            type="email"
+            class="form-control"
+            placeholder="Email Address"
+            required
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            title="Enter a valid email address"
+        ><br>
+
+        <input 
+            type="password"
+            class="form-control"
+            placeholder="Password"
+            required
+            minlength="6"
+            maxlength="12"
+            title="Password must be between 6 and 12 characters"
+        >
+
+        <small>Password must contain 6-12 characters</small><br><br>
+
+        <button type="submit" class="btn btn-primary btn-block">
+            LOGIN
+        </button>
+
+    </form>
+
+    <p class="link">
+        Not a member?
+        <a href="registration_bootstrap.html">Create Account</a>
+    </p>
+
+</div>
+
+</body>
+</html>
